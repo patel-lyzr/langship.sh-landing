@@ -5,10 +5,22 @@ import { Github, Sun, Moon, ArrowUpRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-// Top nav, full width. Wordmark on one line, nav links inline (no bordered
-// cells like before), GitHub + theme + a "Get the platform" button on the
-// right. Sticky so it follows scroll.
-export function TopNav() {
+// Top nav, shared between / (manifesto) and /home (product page).
+//
+// `linkBase` lets the manifesto point its section links at /home#…  so a
+// reader who clicks "Pipeline" on the letter lands on the corresponding
+// section of the product page, not nowhere.
+//
+// Defaults — when omitted, links are in-page (#platform etc.), which is the
+// /home behaviour.
+type Props = {
+  linkBase?: string; // e.g. "/home" → renders "/home#platform"
+  ctaHref?: string;  // override the "Get the platform" button target
+};
+
+export function TopNav({ linkBase = "", ctaHref }: Props = {}) {
+  const wrap = (anchor: string) => `${linkBase}${anchor}`;
+
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-bg/80 backdrop-blur">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-6 px-6 py-4">
@@ -20,10 +32,10 @@ export function TopNav() {
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
-          <NavLink href="#platform" label="Platform" />
-          <NavLink href="#environments" label="Envs" />
-          <NavLink href="#pipeline" label="Pipeline" />
-          <NavLink href="#runtimes" label="Runtimes" />
+          <NavLink href={wrap("#platform")} label="Platform" />
+          <NavLink href={wrap("#environments")} label="Envs" />
+          <NavLink href={wrap("#pipeline")} label="Pipeline" />
+          <NavLink href={wrap("#runtimes")} label="Runtimes" />
         </nav>
 
         <div className="flex items-center gap-3">
@@ -38,7 +50,7 @@ export function TopNav() {
           </a>
           <ThemeToggle />
           <a
-            href="#cta"
+            href={ctaHref ?? wrap("#cta")}
             className="group hidden items-center gap-2 border border-fg bg-fg px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-bg transition-colors hover:bg-fg/90 sm:inline-flex"
           >
             Get the platform
