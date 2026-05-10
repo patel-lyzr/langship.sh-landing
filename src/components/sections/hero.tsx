@@ -34,16 +34,24 @@ export function Hero() {
             </p>
           </div>
 
-          <h1 className="font-display ink-gradient mt-8 text-balance text-6xl uppercase leading-[0.9] tracking-tight md:text-[5.5rem] lg:text-[6rem]">
-            Build agents.<br />
-            <span className="text-accent">Ship</span> them with intent.
+          {/* Positioning hook — italic serif eyebrow that frames langship.sh
+              against an instantly-understood reference (Vercel) without
+              putting that name in the H1. */}
+          <p className="font-display mt-10 text-2xl italic leading-none tracking-tight text-accent md:text-3xl">
+            Vercel for AI agents.
+          </p>
+
+          <h1 className="font-display ink-gradient mt-4 text-balance text-6xl uppercase leading-[0.9] tracking-tight md:text-[5.5rem] lg:text-[6rem]">
+            Build and ship<br />
+            <span className="text-accent">any</span> agent.
           </h1>
 
           <p className="mt-8 max-w-xl text-pretty text-base leading-relaxed text-muted-fg md:text-lg">
-            langship.sh is the control plane for agent applications. One
-            pipeline covers build, governance, deploy, and rollback — across
-            Kubernetes, Bedrock AgentCore, and Vertex AI Agent Engine.
-            Self-hosted, end to end.
+            <span className="text-fg">Any framework.</span>{" "}
+            <span className="text-fg">Any runtime.</span> Build with LangChain,
+            LlamaIndex, CrewAI, AutoGen, or your own SDK — then deploy, govern,
+            and operate them on Kubernetes, Bedrock AgentCore, or Vertex AI
+            Agent Engine. Self-hosted, end to end.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
