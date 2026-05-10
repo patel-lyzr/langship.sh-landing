@@ -10,7 +10,7 @@ const RUNTIMES = [
   {
     n: "02",
     name: "AWS Bedrock AgentCore",
-    desc: "Managed agent runtime on AWS. Same DSL, same governance.",
+    desc: "Managed agent runtime on AWS. Same pipeline, same governance.",
     tag: "Managed · AWS",
   },
   {

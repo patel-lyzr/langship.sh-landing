@@ -22,9 +22,8 @@ export function TopNav() {
         <nav className="hidden items-center gap-7 md:flex">
           <NavLink href="#platform" label="Platform" />
           <NavLink href="#environments" label="Envs" />
-          <NavLink href="#workflow" label="Workflow" />
+          <NavLink href="#pipeline" label="Pipeline" />
           <NavLink href="#runtimes" label="Runtimes" />
-          <NavLink href="#stack" label="Stack" />
         </nav>
 
         <div className="flex items-center gap-3">

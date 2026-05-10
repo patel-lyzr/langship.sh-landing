@@ -14,7 +14,7 @@ const NODES = [
 
 export function Workflow() {
   return (
-    <section id="workflow" className="border-b border-border">
+    <section id="pipeline" className="border-b border-border">
       <div className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
@@ -67,7 +67,7 @@ export function Workflow() {
         {/* YAML below, full width */}
         <div className="mt-12 border border-border bg-bg-2">
           <div className="flex items-center justify-between border-b border-border px-4 py-2.5">
-            <span className="label">.langship/workflows/prod.yaml</span>
+            <span className="label">.langship/pipelines/prod.yaml</span>
             <span className="label">read-only</span>
           </div>
           <pre className="overflow-x-auto px-5 py-5 font-mono text-[12px] leading-relaxed text-fg/90">

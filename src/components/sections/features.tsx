@@ -10,7 +10,7 @@ const FEATURES = [
   },
   {
     n: "02",
-    title: "Any runtime, one DSL",
+    title: "Any runtime, one pipeline",
     body: "Kubernetes, Bedrock AgentCore, Vertex AI Agent Engine. Same definition, same governance.",
   },
   {

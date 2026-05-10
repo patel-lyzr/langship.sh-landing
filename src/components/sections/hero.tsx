@@ -40,10 +40,10 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-pretty text-base leading-relaxed text-muted-fg md:text-lg">
-            langship.sh is the control plane for agent applications. One DSL
-            covers build, governance, deploy, and rollback — across Kubernetes,
-            Bedrock AgentCore, and Vertex AI Agent Engine. Self-hosted, end to
-            end.
+            langship.sh is the control plane for agent applications. One
+            pipeline covers build, governance, deploy, and rollback — across
+            Kubernetes, Bedrock AgentCore, and Vertex AI Agent Engine.
+            Self-hosted, end to end.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -55,7 +55,7 @@ export function Hero() {
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#workflow"
+              href="#pipeline"
               className="group inline-flex items-center justify-between gap-6 border border-border px-5 py-4 font-mono text-xs uppercase tracking-[0.18em] text-fg transition-colors hover:bg-bg-2"
             >
               <span>Read the architecture</span>
@@ -127,7 +127,7 @@ function StatBlock() {
   const STATS = [
     ["3", "runtimes"],
     ["8", "node types"],
-    ["1", "DSL"],
+    ["GitOps", "native"],
   ];
   return (
     <div className="mt-6 grid grid-cols-3 border border-border">
