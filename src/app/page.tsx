@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { TopNav } from "@/components/top-nav";
+import { GITHUB_REPO_URL, GITHUB_REPO_LABEL } from "@/lib/links";
 
 const STYLES = `
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -612,7 +613,7 @@ export default function ManifestoPage() {
       <div className="cta-section reveal">
         <a
           className="star-btn"
-          href="https://github.com/langship/langship"
+          href={GITHUB_REPO_URL}
           target="_blank"
           rel="noreferrer"
         >
@@ -625,7 +626,7 @@ export default function ManifestoPage() {
 
       <footer>
         <p className="footer-url">
-          langship.sh &nbsp;·&nbsp; github.com/langship &nbsp;·&nbsp; open source,
+          langship.sh &nbsp;·&nbsp; {GITHUB_REPO_LABEL} &nbsp;·&nbsp; open source,
           forever
         </p>
       </footer>

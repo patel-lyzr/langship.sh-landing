@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Github, Sun, Moon, ArrowUpRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { GITHUB_REPO_URL } from "@/lib/links";
 
 // Top nav, shared between / (manifesto) and /home (product page).
 //
@@ -40,7 +41,7 @@ export function TopNav({ linkBase = "", ctaHref }: Props = {}) {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com"
+            href={GITHUB_REPO_URL}
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
