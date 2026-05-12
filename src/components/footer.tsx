@@ -17,12 +17,8 @@ export function Footer() {
           </div>
 
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-fg">
-            <a href="#" className="transition-colors hover:text-fg">Docs</a>
             <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-fg">GitHub</a>
-            <a href="#" className="transition-colors hover:text-fg">Changelog</a>
-            <a href="#" className="transition-colors hover:text-fg">Discord</a>
-            <a href="#" className="transition-colors hover:text-fg">Twitter</a>
-            <a href="#" className="transition-colors hover:text-fg">Contact</a>
+            <a href="mailto:khush@lyzr.ai" className="transition-colors hover:text-fg">Contact</a>
           </nav>
         </div>
 
