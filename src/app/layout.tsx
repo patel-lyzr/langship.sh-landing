@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+
+// Google Analytics 4 measurement ID.
+const GA_ID = "G-430F7Y29MB";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -62,6 +66,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-sans antialiased">
+        {/* Google tag (gtag.js) — GA4. next/script with afterInteractive is
+            the App Router equivalent of pasting the snippet after <head>. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
