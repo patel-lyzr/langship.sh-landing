@@ -412,7 +412,9 @@ export default function ManifestoPage() {
             </div>
             <div className="t-line" style={{ marginTop: "1.25rem" }}>
               <span className="t-prompt">$</span>
-              <span className="t-cmd">pip install langship</span>
+              <span className="t-cmd">
+                pip install &quot;git+https://github.com/open-gitagent/langship.sh.git#subdirectory=langship-cli&quot;
+              </span>
             </div>
             <div className="t-line">
               <span className="t-ok">✓ installed langship 0.1.0</span>
