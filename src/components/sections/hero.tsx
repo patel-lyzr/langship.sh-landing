@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Copy, Check } from "lucide-react";
 import { useState } from "react";
+import { GITHUB_REPO_URL } from "@/lib/links";
 
 export function Hero() {
   return (
@@ -56,7 +57,9 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#cta"
+              href={GITHUB_REPO_URL}
+              target="_blank"
+              rel="noreferrer"
               className="group inline-flex items-center justify-between gap-6 border border-fg bg-fg px-5 py-4 font-mono text-xs uppercase tracking-[0.18em] text-bg transition-colors hover:bg-fg/90"
             >
               <span>Deploy a sample agent</span>

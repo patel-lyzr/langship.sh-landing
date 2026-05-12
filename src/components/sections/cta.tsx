@@ -17,18 +17,11 @@ export function CTA() {
 
             <div className="mt-12 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#"
+                href="mailto:khush@lyzr.ai"
                 className="group inline-flex flex-1 items-center justify-between gap-6 border border-fg bg-fg px-5 py-4 font-mono text-xs uppercase tracking-[0.18em] text-bg transition-colors hover:bg-fg/90"
               >
-                <span>langship init</span>
-                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href="#"
-                className="group inline-flex flex-1 items-center justify-between gap-6 border border-border px-5 py-4 font-mono text-xs uppercase tracking-[0.18em] text-fg transition-colors hover:bg-bg-2"
-              >
                 <span>Talk to a maintainer</span>
-                <ArrowUpRight className="h-3.5 w-3.5 text-muted-fg transition-colors group-hover:text-fg" />
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </div>
           </div>
