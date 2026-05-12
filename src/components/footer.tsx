@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { GITHUB_REPO_URL } from "@/lib/links";
+import { BuiltByBadge } from "@/components/built-by-badge";
 
 // Two-row footer:
 //   row 1 — wordmark + inline link row (unchanged from before)
@@ -40,6 +41,13 @@ export function Footer() {
 
           <span>Apache 2.0 · © {new Date().getFullYear()}</span>
         </div>
+      </div>
+
+      {/* Built-by pill — pinned to the bottom-right corner of the page,
+          outside the centered footer container so it hugs the viewport edge.
+          Still in normal flow (scrolls away with the page), not fixed. */}
+      <div className="flex justify-end px-3 pb-3">
+        <BuiltByBadge />
       </div>
     </footer>
   );
