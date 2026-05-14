@@ -51,7 +51,9 @@ export function TopNav({ linkBase = "", ctaHref }: Props = {}) {
           </a>
           <ThemeToggle />
           <a
-            href={ctaHref ?? wrap("#cta")}
+            href={ctaHref ?? GITHUB_REPO_URL}
+            target={ctaHref ? undefined : "_blank"}
+            rel={ctaHref ? undefined : "noreferrer"}
             className="group hidden items-center gap-2 border border-fg bg-fg px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-bg transition-colors hover:bg-fg/90 sm:inline-flex"
           >
             Get the platform
